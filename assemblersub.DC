@@ -1,13 +1,13 @@
-00 JMP 04
-01 DEF 0
-02 DEF 0
-03 DEF 0
+00 JMP 04	; Jump to 4th cache
+01 DEF 0	; Define cache 01 with 0
+02 DEF 0	; Define cache 02 with 0
+03 DEF 0	; Define cache 03 with 0
 
-04 INM 01
-05 INM 02
+04 INM 01	; Userbased integer input saved in cache 01
+05 INM 02	; Userbased integer input saved in cache 02
 
-06 LDA 01
-07 SUB 02
-08 STA 03
-09 OUT 03
+06 LDA 01	; Load saved integer in cache 01 to the akkumulator
+07 SUB 02	; Subtract integer in 02 from the akkumulator
+08 STA 03	; Save current state of the akkumulator to the cache 03
+09 OUT 03	; Output of the integer which is defined in cache 03
 10 END
